@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TITLE -->
+    <title>Home</title>
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- LINK box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>  
+     <!--LINK FONT  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <!-- navbar -->
+      <a href="#" class="logo"
+        ><img src="gambar/logo header.jpg" alt="" />YummyYumsCorner</a>
+
+        <!--muncul saat layar max 991px   -->
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <!-- LINK YANG DAPAT DI AKSES -->
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resep.html">Recipe</a></li>
+        <li><a href="contact.html">Join Us</a></li>
+      </ul>
+        <!-- ini akan muncul saat layar max 991px untuk mengakses ke link  -->
+        <ul class="close-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resep.html">Recipe</a></li>
+        <li><a href="contact.html">Join Us</a></li>
+
+        <button class="tutup">X</button>
+      </ul>
+    </header>
+    <!-- MAIN -->
+    <main>
+      <!-- SECTION -->
+      <section class="home" id="home">
+        <div class="home-text">
+          <span>Welcome to Website</span>
+          <h1>YummyYumsCorner</h1>
+          <div class="home-btn">
+            <a href="resep.html" class="btn">See Recipes</a>
+            <a href="profil.html" class="btn-profil">See Profil</a>
+          </div>  
+        </div>     
+      </section>
+      <!-- SECTION menu popular -->
+      <section class="popular" id="popular">
+        <div class="heading">
+          <h2>popular Food Recipes</h2>
+        </div>
+        <div id="popular-container">
+          <!-- KONTEN DIIISI DARI API -->
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+      <!-- FOOTER CONTAINER -->
+      <div class="footer-info">
+        <div class="adress">
+          <i class="bx bxs-map"><span>Jln Dakota No.8a Sukaraja</span></i>
+          <i class="bx bxs-phone"><span>085 723 764 893</span></i>
+          <i class="bx bxs-envelope"><span>yummyYumsCorner@gmail.com</span></i>
+        </div>
+        <!-- MENUJU LINK MEDSOS -->
+        <div class="social">
+          <a href="https://instagram.com/rrtrna?igshid=MzNlNGNkZWQ4Mg=="><i class="bx bxl-instagram" ></i></a>
+          <a href="https://twitter.com/RiriTrianaa?t=PPDNFkWuYN6yfTt8qSB3pQ&s=08"><i class="bx bxl-twitter" ></i></a>
+          <a href="https://www.tiktok.com/@ririitriana?_t=8eSov3kkiCP&_r=1"><i class="bx bxl-tiktok"></i></a>
+    </div>
+      </div>
+      <p>&#169;copyRight By Riri Triana</p>
+    </footer>
+    <!-- menuju link javascript -->
+    <script src="index.js"></script>
+  </body>
+</html>

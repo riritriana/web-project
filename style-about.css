@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-padding-top: 2rem;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --main-color: #1f2;
+  --sesond-color: #1b6;
+}
+*::selection {
+  color: white;
+  background: rgb(152, 139, 139);
+}
+/* HEADER CSS */
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10%;
+  transition: 0.2s;
+  background-color: white;
+}
+header.active {
+  background: rgb(114, 219, 153);
+  box-shadow: 0 0 4px rgb(14 55 54/15%);
+}
+header.active .logo {
+  color: white;
+}
+header.active .navbar a {
+  color: white;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: orange;
+}
+.logo img {
+  width: 64px;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+.navbar {
+  display: flex;
+}
+.navbar a {
+  font-size: 1rem;
+  padding: 0 20px;
+  color: black;
+  font-weight: 500;
+}
+.navbar a:hover {
+  color: white;
+  background: var(--main-color);
+  border-radius: 4px;
+}
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+  /* mengatur CSS close menu di header */
+  .close-menu {
+    display: none;
+  }
+.open-menu {
+    display: flex;
+    background: antiquewhite;
+    height: 40vh;
+    position: fixed;
+    right: 0;
+    width: 11rem;
+    top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+.open-menu a {
+    font-size: 1rem;
+    padding: 0 20px;
+    color: black;
+    font-weight: 500;
+  }
+.open-menu a:hover {
+    color: white;
+    background: var(--main-color);
+    border-radius: 4px;
+  }
+.tutup{
+      position: absolute;
+      top: 5px;
+      right: 1rem;
+      background: white;
+      border: none;
+      font-size: 19px;
+      border-radius: 5px;
+  }
+.open-menu-icon{
+        display: none;
+    }
+  
+
+/* NAV ABOUT */
+#nav-about {
+  height: 50vh;
+  background-image: url(gambar/bg-3.jpg);
+  background-repeat: no-repeat; /* Menghindari gambar berulang */
+  background-size: cover; /* Mengisi seluruh area background, mengatur sesuai rasio aspek */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.blur-nav-about {
+  height: 100px;
+  background-color: rgba(197, 180, 180, 0.7);
+  /* Background color with transparency */
+  border-radius: 10px;
+  margin-left: 72px;
+  margin-right: 72px;
+}
+.paragraf-about {
+  font-size: 15pt;
+  margin: 0px 32px 0px 32px;
+}
+.h1-nav-about {
+  font-size: 20pt;
+  color: rgb(223, 96, 36);
+  text-align: center;
+}
+/* section dengan clas about */
+section {
+  padding: 30px 10%;
+}
+.about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.about h1 {
+  font-size: 30pt;
+  color: black;
+  margin-bottom: 2rem;
+}
+.about-container {
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 10px;
+  border-top: 6px solid black;
+  border-bottom: 6px solid black;
+  padding: 20px;
+  gap: 2rem;
+}
+.box-img {
+  width: 200px;
+  height: 100%;
+}
+.box-img img {
+  width: 100%;
+  height: 170px;
+  border: 50px;
+  object-fit: contain;
+  object-position: center;
+}
+.about-box {
+  flex: 1 1 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.about-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  margin: 0 0 0.5rem;
+}
+.about-box h2 {
+  font-size: 1.2rem;
+  color: var(--main-color);
+  letter-spacing: 1px;
+}
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  color: #fff;
+}
+
+.footer-info {
+  flex: 1 1 20rem;
+}
+
+.adress {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.adress i {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+}
+.adress span {
+ overflow: hidden;
+  font-size: 1rem;
+  margin-left: 1rem;
+  height: 100%;
+}
+.sosial {
+  margin-top: 1rem;
+}
+
+.sosial a {
+  font-size: 24px;
+  color: var(--main-color);
+  margin-right: 1rem;
+}
+
+.sosial a:hover {
+  color: var(--sesond-color);
+}
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  header {
+    padding: 11px 4%;
+  }
+  #menu-icon {
+    display: initial;
+  }
+  header.active #menu-icon {
+    color: #fff;
+  }
+  header .navbar {
+    position: absolute;
+    top: -500px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--sesond-color);
+    box-shadow: 0 4px 4px rgb(14 55 54/15%);
+    transition: 0.2s ease;
+    text-align: right;
+  }
+  .navbar .active {
+    top: 100%;
+  }
+  .navbar a {
+    padding: 0 20px;
+    display: block;
+    color: #fff;
+  }
+  .blur-nav-about {
+    height: 140px;
+    width:80%;
+  }
+  .h1-nav-about {
+    font-size: 18pt;
+  }
+  .paragraf-about {
+    font-size: 12pt;
+  }
+  .about p {
+    font-size: 1rem;
+  }
+  .about h1 {
+    font-size: 15pt;
+  }
+}
+@media (max-widt:720px){
+  .blur-nav-about {
+    height:120px;
+    width:470px;
+  }
+  .h1-nav-about {
+    font-size: 14pt;
+  }
+  .paragraf-about {
+    font-size: 9pt;
+  }
+  .about p {
+    font-size: 1rem;
+  }
+  .about h1 {
+    font-size: 1.2rem;
+  }
+
+}
+@media (max-width: 560px) {
+  .blur-nav-about {
+    height: 110px;
+    width: 400px;
+  }
+  .h1-nav-about {
+    font-size: 14pt;
+  }
+  .paragraf-about {
+    font-size: 9pt;
+  }
+  .about p {
+    font-size: 1rem;
+  }
+  .about h1 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 420px) {
+  .blur-nav-about {
+    height: 100px;
+    width: 300px;
+  }
+  .h1-nav-about {
+    font-size: 13pt;
+  }
+  .paragraf-about {
+    font-size: 8pt;
+  }
+  .about p {
+    font-size: 1rem;
+  }
+  .about h1 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 360px) {
+  .blur-nav-about {
+    height: 110px;
+    width: 280px;
+  }
+  .h1-nav-about {
+    font-size: 13pt;
+  }
+  .paragraf-about {
+    font-size: 8pt;
+  }
+  .about p {
+    font-size: 0.8rem;
+  }
+  .about h1 {
+    font-size: 1rem;
+  }
+    .adress i{
+      font-size: 15px;
+    }
+    .adress span{
+      font-size: 12px;
+    }
+}
+@media (max-width: 281px) {
+  .logo {
+    font-size: 0.8rem;
+  }
+  .paragraf-about {
+    font-size: 8pt;
+  }
+  .blur-nav-about {
+    height: 120px;
+    width: 240px;
+  }
+  .h1-nav-about {
+    font-size: 12pt;
+  }
+  .about p {
+    font-size: 7pt;
+  }
+  .about h1 {
+    font-size: 12pt;
+  }
+}

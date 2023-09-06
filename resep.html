@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title>Recipe</title>
+    <!-- link CSS -->
+    <link rel="stylesheet" href="recipe.css">
+    <!-- LINK font  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  />
+    <!-- link icon -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
+</head>
+<body>
+    <header>
+        <!-- navbar -->
+        <a href="#" class="logo">
+          <img src="gambar/logo header.jpg" alt="" />YummyYumsCorner</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resep.html">Recipe</a></li>
+          <li><a href="galery.html">Galery</a></li>
+        </ul>
+        <ul class="close-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resep.html">Recipe</a></li>
+          <li><a href="contact.html">Join Us</a></li>
+          <button class="tutup">X</button>
+        </ul>  
+      </header>
+      <!-- NAV -->
+        <nav class="nav-resep">
+
+          <div class="right-nav">
+            <img class="img-nav" src="https://www.pngitem.com/pimgs/m/25-256513_gambar-makanan-kartun-hd-png-download.png" alt="">
+          </div>
+
+          <div class="middle-nav">
+            <h1 class="h1-index">welcome to the page to find grocery recipes on </h1>
+            <h2 class="title">YummyYumCorner</h2>
+          </div>
+
+          <div class="left-nav">
+            <img class="img-nav" src="https://www.pngitem.com/pimgs/m/25-256513_gambar-makanan-kartun-hd-png-download.png" alt="">
+          </div>
+          
+        </nav>
+        <!-- MAIN -->
+        <main>
+          <!-- SECTION -->
+          <section class="section-resep">
+            <!-- DIV PEMBUNGKUS -->
+            <div class = "container">
+              <div class = "meal-wrapper">
+                <div class = "meal-search">
+                  <h2 class = "title">Find The Name Of Your </h2>
+                  <h2 class = "title">Food Recipe</h2>
+
+                  <!-- DIV Tombol search  -->
+                  <div class = "meal-search-box">
+                    <input type = "text" class = "search-control" placeholder="Enter an ingredient" id = "search-input">
+                    <button type = "submit" class = "search-btn btn" id = "search-btn">
+                      <!-- tag i dari google icon -->
+                      <i class = "fas fa-search"></i>
+                    </button>
+                  </div>
+
+                </div>
+                <!-- div untuk hasil pencarian -->
+                <div class = "meal-result">
+                  <h2 class = "title">Your Search Results:</h2>
+                  <div id= "meal">
+                  <!-- konten nya diambil dari API yg diatur di Js -->
+                  </div>
+                </div>    
+
+                <!-- div untuk isi konten detail dari hasil pencarian   -->
+                <div class = "meal-details">
+                  <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
+                    <i class = "fas fa-times"></i>
+                  </button>       
+                  <div class = "meal-details-content">
+                   <!-- konten nya diambil dari API  -->
+                  </div>
+
+                </div>
+              </div>
+            </div>        
+          </section>
+      </main>
+      <!-- footer -->
+    <footer>
+      <!-- footer pembungkus -->
+      <div class="footer-info">
+        <div class="adress">
+          <i class="bx bxs-map"><span>Jln Dakota No.8a Sukaraja</span></i>
+          <i class="bx bxs-phone"><span>085 723 764 893</span></i>
+          <i class="bx bxs-envelope"><span>yummyYumsCorner@gmail.com</span></i>
+        </div>
+        <div class="social">
+          <a href="https://instagram.com/rrtrna?igshid=MzNlNGNkZWQ4Mg=="><i class="bx bxl-instagram" ></i></a>
+          <a href="https://twitter.com/RiriTrianaa?t=PPDNFkWuYN6yfTt8qSB3pQ&s=08"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.tiktok.com/@ririitriana?_t=8eSov3kkiCP&_r=1"><i class="bx bxl-tiktok" ></i></a>
+  </div>
+      </div>
+      <p >&#169;copyRight By Riri Triana</p>
+    </footer>
+  <!-- menuju link java script -->
+    <script src="recipe.js"></script>
+</body>
+</html>

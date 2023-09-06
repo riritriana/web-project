@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200;1,300&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+   
+  }
+  :root {
+    --main-color: #1f2;
+    --sesond-color: #1b6;
+    --tenne-tawny: #d65108;
+    --tenne-tawny-dark: #b54507;
+  }
+ 
+  *::selection {
+    color: white;
+    background: rgb(152, 139, 139);
+  }
+body{
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+/* HEADER CSS */
+header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    transition: 0.2s;
+    background-color: white;
+  }
+  header.active {
+    background: rgb(114, 219, 153);
+    box-shadow: 0 0 4px rgb(14 55 54/15%);
+  }
+  header.active .logo {
+    color: white;
+  }
+  
+  header.active .navbar a {
+    color: white;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: orange;
+  }
+  .logo img {
+    width: 64px;
+    margin-right: 10px;
+    border-radius: 20px;
+  }
+  .navbar {
+    display: flex;
+  }
+  .navbar a {
+    font-size: 1rem;
+    padding: 0 20px;
+    color: black;
+    font-weight: 500;
+  }
+  .navbar a:hover {
+    color: white;
+    background: var(--main-color);
+    border-radius: 4px;
+  }
+  #menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+  }
+  /* mengatur CSS close menu di header */
+  .close-menu {
+    display: none;
+  }
+.open-menu {
+    display: flex;
+    background: antiquewhite;
+    height: 40vh;
+    position: fixed;
+    right: 0;
+    width: 11rem;
+    top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+.open-menu a {
+    font-size: 1rem;
+    padding: 0 20px;
+    color: black;
+    font-weight: 500;
+  }
+.open-menu a:hover {
+    color: white;
+    background: var(--main-color);
+    border-radius: 4px;
+  }
+.tutup{
+      position: absolute;
+      top: 5px;
+      right: 1rem;
+      background: white;
+      border: none;
+      font-size: 19px;
+      border-radius: 5px;
+  }
+.open-menu-icon{
+        display: none;
+    }
+  
+/*NAV RECIPE*/
+.nav-resep {
+    display: flex;
+    height: 32vh;
+    background-color: white;
+    justify-content: space-around;
+    border-bottom: 5px solid orange;
+  }
+/*SET GAMBAR DI NAV RECIPE */
+  .img-nav {
+    width: auto;
+    border-radius: 5rem;
+  }
+  /* SET PART NAV resep */
+  .right-nav {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+  }
+  .middle-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .h1-index{
+    overflow: hidden;
+  }
+  .middle-nav .title {
+   overflow: hidden;
+  }
+
+  .left-nav {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+  }
+  /* SECTION */
+section {
+  padding: 50px 10%;
+}
+.section-resep {
+    background-image: url(gambar/food-2.avif);
+  }
+  
+/*  */
+.btn{
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.05rem;
+}
+.text{
+    opacity: 0.8;
+}
+.title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #d65108;
+    /* overflow: hidden; */
+}
+
+/*  */
+.container{
+    min-height: 100vh;
+}
+.meal-wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+.meal-search{
+    margin: 2rem 0;
+}
+.meal-search cite{
+    font-size: 1rem;
+}
+.meal-search-box{
+    margin: 1.2rem 0;
+    display: flex;
+    align-items: stretch;
+}
+.search-control,
+.search-btn{
+    width: 100%;
+}
+.search-control{
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid black;
+    color:black;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.search-control::placeholder{
+    color: black;
+    font-style: italic;
+}
+.search-btn{
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+    background: white;
+    color: black;
+    border: none;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: all 0.4s linear;
+}
+.search-btn:hover{
+    background: var(--tenne-tawny-dark);
+}
+.meal-result{
+    margin-top: 4rem;
+}
+#meal{
+    margin: 2.4rem 0;
+}
+.meal-item{
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    margin: 2rem 0;
+}
+.meal-img img{
+    width: 100%;
+    display: block;
+}
+.meal-name{
+    padding: 1.5rem 0.5rem;
+}
+.meal-name h3{
+    font-size: 1.4rem;
+}
+.recipe-btn{
+    text-decoration: none;
+    color: #fff;
+    background: var(--tenne-tawny);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+    display: block;
+    width: 175px;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    transition: all 0.4s linear;
+}
+.recipe-btn:hover{
+    background: var(--tenne-tawny-dark);
+}
+
+/* meal details */
+.meal-details{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: var(--tenne-tawny);
+    border-radius: 1rem;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    display: none;
+    padding: 2rem 0;
+}
+.meal-details::-webkit-scrollbar{
+    width: 10px;
+}
+.meal-details::-webkit-scrollbar-thumb{
+    background: #f0f0f0;
+    border-radius: 2rem;
+}
+
+/* js related */
+.showRecipe{
+    display: block;
+}
+
+.meal-details-content{
+    margin: 2rem;
+}
+.meal-details-content p:not(.recipe-category){
+    padding: 1rem 0;
+}
+.recipe-close-btn{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    background: #fff;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+.recipe-title{
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+.recipe-category{
+    background: #fff;
+    font-weight: 600;
+    color: var(--tenne-tawny);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+}
+.recipe-category{
+    background: #fff;
+    font-weight: 600;
+    color: var(--tenne-tawny);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+}
+.recipe-instruct{
+    padding: 1rem 0;
+}
+.recipe-meal-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.recipe-link{
+    margin: 1.4rem 0;
+}
+.recipe-link a{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.4s linear;
+}
+.recipe-link a:hover{
+    opacity: 0.8;
+}
+/*  */
+.notFound{
+    grid-template-columns: 1fr!important;
+    color: var(--tenne-tawny);
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+}
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  color: #fff;
+}
+
+.footer-info {
+  flex: 1 1 20rem;
+}
+
+.adress {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.adress i {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+}
+.adress span {
+ overflow: hidden;
+  font-size: 1rem;
+  margin-left: 1rem;
+  height: 100%;
+}
+.sosial {
+  margin-top: 1rem;
+}
+
+.sosial a {
+  font-size: 24px;
+  color: var(--main-color);
+  margin-right: 1rem;
+}
+
+.sosial a:hover {
+  color: var(--sesond-color);
+}
+footer p{
+  font-size: 16px;
+}
+/* RESPONSIVE */
+@media screen and (min-width: 991px){
+  #meal{
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* untuk memunculkan menu icon sehingga ukurannya dibuat max 991px */
+  @media (max-width: 991px) {
+    header {
+      padding: 18px 4%;
+    }
+    section {
+      padding: 50px 4%;
+    }
+    #menu-icon {
+      display: initial;
+    }
+    header.active #menu-icon {
+      color: #fff;
+    }
+    header .navbar {
+      position: absolute;
+      top: -500px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--sesond-color);
+      box-shadow: 0 4px 4px rgb(14 55 54/15%);
+      transition: 0.2s ease;
+      text-align: right;
+    }
+    .navbar .active {
+      top: 100%;
+    }
+    .navbar a {
+      padding: 1.5rem;
+      display: block;
+      color: #fff;
+    }
+    .home-text h1 {
+      font-size: 2.4rem;
+    }
+    .recipe-title{
+      font-size:21px;
+    }
+    .recipe-category{
+      font-size: 18px ;
+    }
+    .recipe-instruct{
+      font-size:19px;
+    }
+    .recipe-instruct p{
+      font-size: 16px;
+    }
+    .meal-details{
+      width: 70%;
+      height: 70%;
+    }
+    .meal-name h3{
+      font-size: 15px;
+    }
+    .recipe-btn{
+      width: 150px;
+    }
+    .meal-name a{
+      font-size: 16px; 
+    }
+    .fas{
+      font-size: 1.6rem;
+    }
+    
+    
+  }
+
+@media screen and (min-width: 768px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .meal-item{
+        margin: 0;
+    }
+    .meal-details{
+        width: 700px;
+    }
+}
+@media (max-width:640px){
+  .h1-index{
+    font-size: 25px;
+  }
+  .title {
+    font-size: 25px;
+  }
+  #search-input {
+    width: 80%;
+}
+.recipe-title{
+  font-size:19px;
+}
+.recipe-category{
+  font-size: 16px ;
+}
+.recipe-instruct{
+  font-size:18px;
+}
+.recipe-instruct p{
+  font-size: 15px;
+}
+.meal-details{
+  width: 70%;
+  height: 70%;
+}
+.meal-name h3{
+  font-size: 13px;
+}
+.recipe-btn{
+  width: 140px;
+}
+.meal-name a{
+  font-size: 12px; 
+}
+.fas{
+  font-size: 1.4rem;
+}
+
+}
+@media screen and (min-width: 600px){
+  .meal-search-box{
+      width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+@media (max-width:500px){
+  .h1-index{
+    font-size:20px;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .recipe-title{
+    font-size:19px;
+  }
+  .recipe-category{
+    font-size: 16px ;
+  }
+  .recipe-instruct{
+    font-size:18px;
+  }
+  .recipe-instruct p{
+    font-size: 15px;
+  }
+  .meal-details{
+    width: 70%;
+    height: 70%;
+  }
+  .meal-name h3{
+    font-size: 12px;
+  }
+  .recipe-btn{
+    width: 140px;
+  }
+  .meal-name a{
+    font-size: 10px; 
+  }
+  .fas{
+    font-size: 1.4rem;
+  }
+
+}
+@media(max-width:390px){
+  .h1-index{
+    font-size: 18px;
+  }
+  .title{
+    font-size: 18px;
+  }
+  .img-nav{
+    height: 100px;
+    width: 100px;
+  }
+  .nav-resep{
+    height: 20vh;
+  }
+  .search-control{
+   width: 150px;
+   font-size: 0.8rem;
+  }
+  .meal-search-box{
+    justify-content: center;
+  }
+}
+@media(max-width:360px){
+  .adress i{
+    font-size: 15px;
+  }
+  .adress span{
+    font-size: 12px;
+  }
+  .h1-index{
+    font-size: 15px;
+  }
+  .title{
+    font-size: 16px;
+  }
+  .recipe-title{
+    font-size:18px;
+  }
+  .recipe-category{
+    font-size: 15px ;
+  }
+  .recipe-instruct{
+    font-size:17px;
+  }
+  .recipe-instruct p{
+    font-size: 15px;
+  }
+  .meal-details{
+    width: 70%;
+    height: 70%;
+  }
+  .meal-name h3{
+    font-size: 10px;
+  }
+  .recipe-btn{
+    width: 130px;
+  }
+  .meal-name a{
+    font-size: 10px; 
+  }
+  .fas{
+    font-size: 1.2rem;
+  }
+  }
